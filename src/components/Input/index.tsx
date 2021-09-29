@@ -5,9 +5,9 @@ import { useField } from "@unform/core";
 import { Container } from "./styles";
 import { IconType } from "react-icons";
 
-interface IInputProps {
+interface IInputProps extends React.HTMLAttributes<HTMLInputElement> {
   name: string;
-  icon: IconType;
+  icon?: IconType;
 }
 
 export function Input({ name, icon: Icon, ...rest }: IInputProps) {
@@ -50,5 +50,3 @@ export function Input({ name, icon: Icon, ...rest }: IInputProps) {
     </Container>
   );
 }
-
-export default Input;
